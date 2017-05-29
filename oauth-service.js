@@ -279,7 +279,7 @@ var OAuthService = (function () {
     };
     ;
     OAuthService.prototype.getFragment = function () {
-        if (window.location.hash.indexOf("#") === 0) {
+        if (window.location.hash.lastIndexOf("#") === 0) {
             return this.parseQueryString(window.location.hash.substr(1));
         }
         else {
